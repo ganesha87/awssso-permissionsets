@@ -5,7 +5,7 @@ from yaml.loader import SafeLoader
 newLine = '\n'
 
 pSets = 'permission_sets = [' +newLine
-with open('../config/permissionsets.yml') as f:
+with open('permissionsets.yml') as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))
     strPermissionSets = ''
 
@@ -16,7 +16,7 @@ with open('../config/permissionsets.yml') as f:
         for permission in fTeam['permissionsets']:
             pset = '  {' + newLine
             pset = pset + '    name               = "'+ permission['permission-name'] + '"' + newLine
-            pset = pset + '    description        = "Update later : '+ fTeam['functional-team-name'] + permission['permission-name']  +'",'+ newLine
+            pset = pset + '    description        = "Update later : ' + permission['permission-name']  +'",'+ newLine
             pset = pset + '    relay_state        = "",' + newLine
             pset = pset + '    session_duration   = "",' + newLine
             pset = pset + '    tags               = {},' + newLine
