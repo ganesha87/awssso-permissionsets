@@ -1,5 +1,5 @@
 ---
-functional-team-name: "Base-Polcies"
+base-generic-permissionsets: "Base-Polcies"
 permissionsets:
   - permission-name: "adminAccess"
     policies: 
@@ -8,7 +8,7 @@ permissionsets:
     policies:
     - "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess"
 ---
-functional-team-name: "Infra-Foundation-team"
+functional-team-name-custom-permissions: "Infra-Foundation-team"
 permissionsets:
   - permission-name: "InfraFdnSREReadonlyAccess"
     policies: 
