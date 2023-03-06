@@ -57,6 +57,11 @@ jobs:
         cd terraform
         terraform plan -var-file permissionsets.tfvars -input=false
         
+    #upload the terraform state to S3
+    #- name: Init tfvars file and fetch Terraform state
+    #  run: |
+    #    python scripts/uploadLatestTFState.py
+        
         
     
         
