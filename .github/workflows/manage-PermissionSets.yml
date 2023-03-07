@@ -60,10 +60,19 @@ jobs:
         terraform init
         terraform plan -var-file permissionsets.tfvars -input=false
         
+    # Apply plan for Terraform
+    - name: Terraform Apply
+      run: |
+        #python scripts/createPermissionsConfig.py > ./terraform/permissionsets.tfvars
+        #python scripts/getlatestTFState.py
+        cd terraform
+        terraform init
+        terraform apply -var-file permissionsets.tfvars -input=false
+        
     #upload the terraform state to S3
-    #- name: Init tfvars file and fetch Terraform state
-    #  run: |
-    #    python scripts/uploadLatestTFState.py
+    - name: Init tfvars file and fetch Terraform state
+      run: |
+        python scripts/uploadLatestTFState.py
         
         
     
