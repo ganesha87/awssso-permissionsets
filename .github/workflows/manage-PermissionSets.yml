@@ -1,5 +1,5 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# This workflow will configure AWS SSO Permissionsets based on the Permissionset.yml file.
+# Dependencies : Python3 Boto3 pyyaml
 
 name: Manage PermissionSets
 
@@ -67,7 +67,7 @@ jobs:
         #python scripts/getlatestTFState.py
         cd terraform
         terraform init
-        terraform apply -var-file permissionsets.tfvars -input=false
+        terraform apply -auto-approve -var-file permissionsets.tfvars -input=false
         
     #upload the terraform state to S3
     - name: Init tfvars file and fetch Terraform state
