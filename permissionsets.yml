@@ -10,6 +10,9 @@ permissionsets:
   - permission-name: "readOnlyAccess"
     policies:
     - "arn:aws:iam::aws:policy/ReadOnlyAccess"
+  - permission-name: "powerUserAccess"
+    policies:
+    - "arn:aws:iam::aws:policy/PowerUserAccess"
 ---
 functional-team-name-custom-permissions: "Infra-Foundation-team"
 permissionsets:
