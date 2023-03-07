@@ -70,7 +70,7 @@ jobs:
         terraform apply -auto-approve -var-file permissionsets.tfvars -input=false
         
     #upload the terraform state to S3
-    - name: Init tfvars file and fetch Terraform state
+    - name: Upload Terraform state to S3
       run: |
         python scripts/uploadLatestTFState.py
         
