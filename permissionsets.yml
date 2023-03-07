@@ -7,6 +7,9 @@ permissionsets:
   - permission-name: "viewOnlyAccess"
     policies:
     - "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess"
+  - permission-name: "readOnlyAccess"
+    policies:
+    - "arn:aws:iam::aws:policy/ReadOnlyAccess"
 ---
 functional-team-name-custom-permissions: "Infra-Foundation-team"
 permissionsets:
