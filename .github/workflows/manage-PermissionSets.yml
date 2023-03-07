@@ -55,7 +55,7 @@ jobs:
     - name: Terraform Plan
       run: |
         python scripts/createPermissionsConfig.py > ./terraform/permissionsets.tfvars
-        #python scripts/getlatestTFState.py
+        python scripts/getlatestTFState.py
         cd terraform
         terraform init
         terraform plan -var-file permissionsets.tfvars -input=false
